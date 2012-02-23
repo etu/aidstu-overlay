@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>aidstu</name>
+    <description>etu &amp; adisbladis's collaboritve overlay</description>
+    <homepage>https://github.com/etu/aidstu-overlay</homepage>
+    <owner type="project">
+      <email>etu@failar.nu</email>
+      <name>Etu</name>
+    </owner>
+    <owner type="project">
+      <email>adis@blad.is</email>
+      <name>adisbladis</email>
+    </owner>
+    <source type="git">git://github.com/etu/aidstu-overlay.git</source>
+    <feed>https://github.com/etu/aidstu-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
