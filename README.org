@@ -1,0 +1,17 @@
+
+* What is this?
+
+It's a gentoo overlay by [[/etu][Etu]] and [[/adisbladis][Adisbladis]].
+
+
+* And it contains...?
+
+Some random stuff, plz look around.
+
+
+* How to add it to my system?
+
+Merge layman, edit the file: /etc/layman/layman.cfg
+
+And add "https://github.com/etu/aidstu-overlay/raw/master/overlay.xml" to the "overlays" part.
+
