@@ -20,7 +20,7 @@ IUSE=""
 RDEPEND="games-misc/cowsay"
 
 src_unpack() {
-    git-2_src_unpack
+	git-2_src_unpack
 }
 
 src_prepare() {
