@@ -23,10 +23,6 @@ src_unpack() {
 	git-2_src_unpack
 }
 
-src_prepare() {
-	sed -i 's/\*\*//g' Makefile
-}
-
 src_compile() {
 	DESTDIR=$(echo ${D} | sed 's/\/$//') make install
 }
