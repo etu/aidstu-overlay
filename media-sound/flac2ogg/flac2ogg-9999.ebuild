@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-3
-media-sound/vorbis-tools"
+media-sound/vorbis-tools[flac]"
 
 src_configure() {
     true
