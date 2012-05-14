@@ -65,6 +65,8 @@ RDEPEND="${RDEPEND}
 		
 		app-text/evince
 		
+		media-gfx/feh
+		
 		net-im/gajim
 		
 		www-client/firefox
