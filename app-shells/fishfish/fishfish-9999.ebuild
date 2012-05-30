@@ -14,7 +14,7 @@ EGIT_BRANCH="fish_fish"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="X"
 
 DEPEND="app-doc/doxygen
