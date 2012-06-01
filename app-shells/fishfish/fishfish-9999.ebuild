@@ -9,7 +9,7 @@ inherit base autotools git-2 eutils
 DESCRIPTION="fish is a user friendly command line shell for UNIX-like operating systems such as Linux."
 HOMEPAGE="http://ridiculousfish.com/shell/"
 
-EGIT_REPO_URI="git://gitorious.org/~adisbladis/fish-shell/adisbladiss-fishfish.git"
+EGIT_REPO_URI="git://gitorious.org/~ridiculousfish/fish-shell/fishfish.git"
 EGIT_BRANCH="fish_fish"
 
 LICENSE="GPL-2"
