@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit base autotools git-2 eutils
 
-DESCRIPTION="fish is a user friendly command line shell for UNIX-like operating systems such as Linux."
+DESCRIPTION="fishfish is a fork of fish the Friendly Interactive SHell"
 HOMEPAGE="http://ridiculousfish.com/shell/"
 
 EGIT_REPO_URI="git://gitorious.org/~ridiculousfish/fish-shell/fishfish.git"
@@ -23,22 +23,27 @@ DEPEND="app-doc/doxygen
 	sys-devel/gettext
 	www-client/htmlview
 	X? ( x11-misc/xsel )
+	
 	!app-shells/fish"
+
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-    base_src_prepare
+	base_src_prepare
 	
-    eautoreconf
+	eautoreconf
 }
 
 src_configure() {
-    econf --without-xsel
+	econf \
+		docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--without-xsel \
+		--bindir="${EPREFIX}"/bin
 }
 
 pkg_postinst() {
-    elog
-    elog "To use fish as your default shell, you need to add /usr/bin/fish"
-    elog "to /etc/shells."
-    elog
+	elog
+	elog "To use fish as your default shell, you need to add /bin/fish"
+	elog "to /etc/shells."
+	elog
 }
