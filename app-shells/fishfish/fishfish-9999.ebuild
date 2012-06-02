@@ -9,7 +9,7 @@ inherit base autotools git-2 eutils
 DESCRIPTION="fishfish is a fork of fish the Friendly Interactive SHell"
 HOMEPAGE="http://ridiculousfish.com/shell/"
 
-EGIT_REPO_URI="git://gitorious.org/fish-shell/fish-shell.git"
+EGIT_REPO_URI="git://gitorious.org/~ridiculousfish/fish-shell/fishfish.git"
 EGIT_BRANCH="fish_fish"
 
 LICENSE="GPL-2"
