@@ -15,7 +15,7 @@ Merge layman, edit the file: /etc/layman/layman.cfg
 
 And add <https://github.com/etu/aidstu-overlay/raw/master/overlay.xml> to the "overlays" part.
 
-Like this:
+Like this...
 :overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
 :	https://github.com/etu/aidstu-overlay/raw/master/overlay.xml
 
