@@ -19,3 +19,10 @@ Like this...
 :overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
 :	https://github.com/etu/aidstu-overlay/raw/master/overlay.xml
 
+And then just...
+:$ layman -L
+:$ layman -a aidstu
+
+And make sure to have this at the end of your /etc/make.conf:
+:source /var/lib/layman/make.conf
+
