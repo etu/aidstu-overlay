@@ -18,7 +18,6 @@ RDEPEND="${RDEPEND}
 	app-editors/nano
 	app-editors/emacs
 	app-emacs/emacs-daemon
-	app-emacs/php-mode
 	
 	app-misc/screen
 	app-misc/vlock
