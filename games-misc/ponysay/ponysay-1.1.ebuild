@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://github.com/erkin/ponysay.git"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 RDEPEND="games-misc/cowsay"
