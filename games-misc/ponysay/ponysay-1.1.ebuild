@@ -20,13 +20,13 @@ IUSE=""
 RDEPEND="games-misc/cowsay"
 
 src_compile() {
-	git checkout -q 1.1 > /dev/null
+	git checkout -q ${PVR} > /dev/null
 	
 	if [ "$?" == "0" ]; then
 		make all
 		DESTDIR=$(echo ${D} | sed 's/\/$//') make install
 	else
-		einfo "git checkout to get exactly the 1.1 tag failed somehow"
+		einfo "git checkout to get exactly the ${PVR} tag failed somehow"
 		exit 1
 	fi
 }
