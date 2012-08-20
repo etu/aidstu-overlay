@@ -24,6 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
+	./configure
 	make all
-	DESTDIR=$(echo ${D} | sed 's/\/$//') make install
+	DESTDIR=${D} make install
 }
