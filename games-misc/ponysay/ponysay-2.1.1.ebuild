@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/erkin/ponysay"
 
 SRC_URI=""
 EGIT_REPO_URI="git://github.com/erkin/ponysay.git"
-EGIT_COMMIT="2.1-rc1"
+EGIT_COMMIT="2.1.1"
 
 LICENSE="WTFPL-2"
 SLOT="0"
@@ -29,10 +29,10 @@ RDEPEND="sys-apps/coreutils
 	zsh-completion?  ( app-shells/zsh )"
 
 src_configure() {
-	./configure --without-shared-cache                                                   \
-		$(use_with bash-completion | sed -e 's/-completion//' -e 's/--with-bash//')  \
-		$(use_with fish-completion | sed -e 's/-completion//' -e 's/--with-fish//')  \
-		$(use_with zsh-completion  | sed -e 's/-completion//' -e 's/--with-zsh//')   \
+	./configure --without-shared-cache                                                       \
+		$(use_with bash-completion | sed -e 's/-completion//' -e 's/--with-bash//')      \
+		$(use_with fish-completion | sed -e 's/-completion//' -e 's/--with-fish//')      \
+		$(use_with zsh-completion  | sed -e 's/-completion//' -e 's/--with-zsh//')       \
 		$(use_with info            | sed 's/--with-info//')
 }
 
