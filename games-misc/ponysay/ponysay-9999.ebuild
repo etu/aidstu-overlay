@@ -15,16 +15,30 @@ EGIT_REPO_URI="git://github.com/erkin/ponysay.git"
 LICENSE="WTFPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+IUSE="-info -bash-completion -fish-completion -zsh-completion"
 
-RDEPEND="games-misc/cowsay"
+DEPEND="app-arch/gzip
+	info? ( sys-apps/texinfo )
+	sys-devel/make
+	sys-apps/sed"
 
-src_unpack() {
-	git-2_src_unpack
+RDEPEND="sys-apps/coreutils
+	>=dev-lang/python-3.0
+	fish-completion? ( || ( app-shells/fishfish app-shells/fish ) )
+	zsh-completion?  ( app-shells/zsh )"
+
+src_configure() {
+	./configure --without-shared-cache                                                       \
+		$(use_with bash-completion | sed -e 's/-completion//' -e 's/--with-bash//')      \
+		$(use_with fish-completion | sed -e 's/-completion//' -e 's/--with-fish//')      \
+		$(use_with zsh-completion  | sed -e 's/-completion//' -e 's/--with-zsh//')       \
+		$(use_with info            | sed 's/--with-info//')
 }
 
 src_compile() {
-	./configure
-	make all
-	DESTDIR=${D} make install
+	make
+}
+
+src_install() {
+	emake install DESTDIR="${D}"
 }
