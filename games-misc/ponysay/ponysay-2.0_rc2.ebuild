@@ -23,7 +23,11 @@ src_compile() {
 	git checkout -q 2.0-rc2 > /dev/null
 	
 	if [ "$?" == "0" ]; then
+		sed -i 's/ponysay.pl/ponysay.py/' completion/fish-completion.fish
+		
+		./configure
 		make all
+		
 		DESTDIR=$(echo ${D} | sed 's/\/$//') make install
 	else
 		einfo "git checkout to get exactly the 2.0-rc2 tag failed somehow"
