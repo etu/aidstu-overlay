@@ -27,8 +27,7 @@ src_compile() {
 		
 		./configure
 		make all
-		
-		DESTDIR=$(echo ${D} | sed 's/\/$//') make install
+		make install
 	else
 		einfo "git checkout to get exactly the 2.0-rc2 tag failed somehow"
 		exit 1
