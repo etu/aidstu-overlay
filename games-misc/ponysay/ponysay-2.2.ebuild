@@ -15,7 +15,7 @@ EGIT_COMMIT="2.2"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="-info -bash-completion -fish-completion -zsh-completion"
 
 DEPEND="app-arch/gzip
