@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit git-2 eutils
 
-DESCRIPTION="Pony wrapper for cowsay."
+DESCRIPTION="cowsay reimplemention for ponies"
 HOMEPAGE="https://github.com/erkin/ponysay"
 
 SRC_URI=""
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://github.com/erkin/ponysay.git"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="**"
 IUSE="-info -bash-completion -fish-completion -zsh-completion"
 
 DEPEND="app-arch/gzip

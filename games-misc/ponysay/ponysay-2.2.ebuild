@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit git-2 eutils
 
-DESCRIPTION="Pony wrapper for cowsay."
+DESCRIPTION="cowsay reimplemention for ponies"
 HOMEPAGE="https://github.com/erkin/ponysay"
 
 SRC_URI=""
