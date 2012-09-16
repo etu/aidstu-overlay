@@ -46,6 +46,7 @@ RDEPEND="${RDEPEND}
 	net-misc/dhcpcd
 	net-misc/mosh
 	net-misc/ntp
+	net-misc/telnet-bsd
 	net-misc/youtube-dl
 	
 	sys-apps/ack
