@@ -19,10 +19,13 @@ RDEPEND="${RDEPEND}
 	app-editors/emacs
 	app-emacs/emacs-daemon
 	
+	app-text/sloccount
+	
 	app-misc/screen
 	app-misc/vlock
 	
 	app-portage/eix
+	app-portage/layman
 	app-portage/gentoolkit
 	
 	|| ( app-shells/fish app-shells/fishfish )
@@ -39,12 +42,18 @@ RDEPEND="${RDEPEND}
 	
 	net-dns/bind-tools
 	
+	net-misc/curl
 	net-misc/dhcpcd
+	net-misc/mosh
 	net-misc/ntp
+	net-misc/telnet-bsd
 	net-misc/youtube-dl
 	
 	sys-apps/ack
 	sys-apps/less
+	sys-apps/pv
+	
+	sys-apps/svorak
 	
 	sys-apps/pciutils
 	sys-apps/usbutils
@@ -65,8 +74,19 @@ RDEPEND="${RDEPEND}
 		
 		app-text/evince
 		
+		media-fonts/arphicfonts
+		media-fonts/corefonts
+		media-fonts/freefonts
+		media-fonts/intlfonts
+		media-fonts/terminus-font
+		
 		media-gfx/feh
 		media-gfx/scrot
+		
+		media-sound/alsa-utils
+		
+		media-video/mplayer
+		media-video/rtmpdump
 		
 		net-im/gajim
 		
@@ -74,6 +94,7 @@ RDEPEND="${RDEPEND}
 		www-client/chromium
 		
 		x11-misc/parcellite
+		x11-misc/screen-message
 	)
 "
 
