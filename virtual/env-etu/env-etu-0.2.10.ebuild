@@ -32,6 +32,8 @@ RDEPEND="${RDEPEND}
 	
 	app-text/wgetpaste
 	
+	dev-python/bpython
+	
 	dev-vcs/mercurial
 	
 	games-misc/ponysay
@@ -61,6 +63,7 @@ RDEPEND="${RDEPEND}
 	sys-fs/ncdu
 	sys-fs/sshfs-fuse
 	
+	sys-process/lsof
 	sys-process/htop
 	sys-process/time
 	
@@ -78,19 +81,11 @@ RDEPEND="${RDEPEND}
 		app-text/evince
 		
 		media-fonts/arphicfonts
-		media-fonts/bitstream-cyberbit
 		media-fonts/corefonts
 		media-fonts/dejavu
-		media-fonts/droid
 		media-fonts/freefonts
-		media-fonts/ipamonafont
 		media-fonts/intlfonts
-		media-fonts/ja-ipafonts
-		media-fonts/proggy-fonts
-		media-fonts/takao-fonts
 		media-fonts/terminus-font
-		media-fonts/wqy-microhei
-		media-fonts/wqy-zenhei
 		
 		media-gfx/feh
 		media-gfx/scrot
