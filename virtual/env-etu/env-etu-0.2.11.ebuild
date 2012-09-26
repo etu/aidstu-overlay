@@ -50,6 +50,7 @@ RDEPEND="${RDEPEND}
 	net-misc/ntp
 	net-misc/telnet-bsd
 	net-misc/youtube-dl
+	net-misc/whois
 	
 	sys-apps/ack
 	sys-apps/less
