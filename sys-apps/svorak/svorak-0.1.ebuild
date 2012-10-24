@@ -23,12 +23,12 @@ src_unpack() {
 src_prepare() {
 	if [ "$(use_enable tty_svorak_a1)" == "--enable-tty_svorak_a1" ]; then
 		mkdir -p usr/share/keymaps/i386/dvorak/
-		gzip ${FILESDIR}/tty/svorak.map > usr/share/keymaps/i386/dvorak/svorak.map.gz
+		gzip -c ${FILESDIR}/tty/svorak.map > usr/share/keymaps/i386/dvorak/svorak.map.gz
 	fi
 	
 	if [ "$(use_enable tty_svorak_a5)" == "--enable-tty_svorak_a5" ]; then
 		mkdir -p usr/share/keymaps/i386/dvorak/
-		gzip ${FILESDIR}/tty/svoraka5.map > usr/share/keymaps/i386/dvorak/svoraka5.map.gz
+		gzip -c ${FILESDIR}/tty/svoraka5.map > usr/share/keymaps/i386/dvorak/svoraka5.map.gz
 	fi
 	
 	if [ "$(use_enable x11_svorak_a5)" == "--enable-x11_svorak_a5" ]; then
