@@ -33,7 +33,7 @@ src_prepare() {
 	
 	if [ "$(use_enable x11_svorak_a5)" == "--enable-x11_svorak_a5" ]; then
 		mkdir -p usr/share/X11/xkb/symbols
-		cp ${FILESDIR}/x11/svoraka5 usr/share/X11/xkb/symbols/se_dvorak_a5
+		cp ${FILESDIR}/x11/svoraka5 usr/share/X11/xkb/symbols/svoraka5
 	fi
 }
 
@@ -56,7 +56,7 @@ pkg_postinst() {
 	
 	if [ "$(use_enable x11_svorak_a5)" == "--enable-x11_svorak_a5" ]; then
 		einfo 'The installed Svorak A5 for X11 is named "se_dvorak_a5"" and you load it like this:'
-		einfo ' $ setxkbmap se_dvorak_a5'
+		einfo ' $ setxkbmap svoraka5'
 		einfo
 	fi
 }
