@@ -43,20 +43,21 @@ src_install() {
 
 pkg_postinst() {
 	if [ "$(use_enable tty_svorak_a1)" == "--enable-tty_svorak_a1" ]; then
-		einfo "Your Svorak A1 for TTY is named svorak"
-		einfo "Load it with: $ loadkeys svorak"
+		einfo 'The installed Svorak A1 for TTY is named "svorak" and you load it like this:'
+		einfo ' $ loadkeys svorak'
 		einfo
 	fi
 	
 	if [ "$(use_enable tty_svorak_a5)" == "--enable-tty_svorak_a5" ]; then
-		einfo "Your Svorak A5 for TTY is named svoraka5"
-		einfo "Load it with: $ loadkeys svoraka5"
+		einfo 'The installed Svorak A5 for TTY is named "svoraka5" and you load it like this:'
+		einfo ' $ loadkeys svoraka5'
 		einfo
 	fi
 	
 	if [ "$(use_enable x11_svorak_a5)" == "--enable-x11_svorak_a5" ]; then
-		einfo "Your Svorak A5 for X11 is named se_dvorak_a5"
-		einfo "Load it with: $ setxkbmap se_dvorak_a5"
+		einfo 'The installed Svorak A5 for X11 is named "se_dvorak_a5"" and you load it like this:'
+		einfo ' $ setxkbmap se_dvorak_a5'
+		einfo
 	fi
 }
 
