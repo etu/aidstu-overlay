@@ -11,7 +11,7 @@ HOMEPAGE='https://github.com/erkin/ponysay'
 
 SRC_URI=''
 EGIT_REPO_URI='git://github.com/erkin/ponysay.git'
-EGIT_COMMIT='2.5.1'
+EGIT_COMMIT='2.9.1'
 
 LICENSE='WTFPL-2'
 SLOT='0'
@@ -27,10 +27,6 @@ RDEPEND='sys-apps/coreutils
 		>=dev-lang/python-3.0
 		fish-completion? ( || ( app-shells/fishfish app-shells/fish ) )
 		zsh-completion?  ( app-shells/zsh )'
-
-src_configure() {
-	rm configure
-}
 
 src_compile() {
 	python3 setup.py --everything                               \
