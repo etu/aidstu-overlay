@@ -6,12 +6,8 @@ EAPI="4"
 
 inherit base autotools git-2 eutils
 
-DESCRIPTION="fishfish is a fork of fish the Friendly Interactive SHell"
+DESCRIPTION="fishfish is a fork of fish, the Friendly Interactive SHell"
 HOMEPAGE="http://ridiculousfish.com/shell/"
-
-#EGIT_REPO_URI="git://gitorious.org/~ridiculousfish/fish-shell/fishfish.git"
-#EGIT_REPO_URI="git://gitorious.org/~adisbladis/fish-shell/adisbladiss-fishfish.git"
-#EGIT_BRANCH="fish_fish"
 
 EGIT_REPO_URI="git://github.com/fish-shell/fish-shell.git"
 
@@ -26,27 +22,23 @@ DEPEND="app-doc/doxygen
 	sys-devel/gettext
 	www-client/htmlview
 	X? ( x11-misc/xsel )
-	
 	!app-shells/fish"
 
-RDEPEND="${DEPEND}"
-
+RDEPEND=""
 src_prepare() {
-	base_src_prepare
-	
-	eautoreconf
+	eautoconf
 }
 
 src_configure() {
-	econf \
-		docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--without-xsel \
-		--bindir="${EPREFIX}"/bin
+	# --without-xsel is because the dev bundles xsel with
+	# the tarball for some odd reason, turns off the compiling of the
+	# bundled version
+	econf --without-xsel
 }
 
 pkg_postinst() {
 	elog
 	elog "To use fish as your default shell, you need to add /bin/fish"
-	elog "to /etc/shells."
+	elog "to /etc/shells and change your login shell to /bin/fish."
 	elog
 }
