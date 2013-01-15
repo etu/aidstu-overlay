@@ -34,6 +34,7 @@ RDEPEND="${RDEPEND}
 	
 	dev-python/bpython
 	
+	dev-util/strace
 	dev-util/source-highlight
 	
 	dev-vcs/mercurial
@@ -111,8 +112,12 @@ RDEPEND="${RDEPEND}
 		www-client/firefox
 		www-client/chromium
 		
+		x11-misc/dmenu
 		x11-misc/parcellite
 		x11-misc/screen-message
+		x11-misc/xclip
+		
+		x11-wm/i3
 	)
 "
 
