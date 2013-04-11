@@ -26,6 +26,8 @@ DEPEND="app-doc/doxygen
 
 RDEPEND=""
 src_prepare() {
+	epatch "${FILESDIR}/access-violation.patch"
+	
 	eautoconf
 }
 
