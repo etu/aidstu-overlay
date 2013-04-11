@@ -30,13 +30,10 @@ src_prepare() {
 }
 
 src_configure() {
-	# --without-xsel is because the dev bundles xsel with
-	# the tarball for some odd reason, turns off the compiling of the
-	# bundled version
 	econf                                           \
 		docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--without-xsel                          \
-		--bindir="${EPREFIX}"/bin
+		--bindir="${EPREFIX}"/bin               \
+		--prefix="${EPREFIX}"
 }
 
 pkg_postinst() {
