@@ -21,14 +21,13 @@ DEPEND="app-doc/doxygen
 	sys-devel/bc
 	sys-devel/gettext
 	www-client/htmlview
-	X? ( x11-misc/xsel )
-	!app-shells/fish"
+	X? ( x11-misc/xsel )"
 
 RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	mv fish ${S}
+	mv ${PN} ${S}
 	cd ${S}
 }
 
@@ -45,7 +44,7 @@ src_configure() {
 
 pkg_postinst() {
 	elog
-	elog "To use fish as your default shell, you need to add /bin/fish"
+	elog "To use ${PN} as your default shell, you need to add /bin/fish"
 	elog "to /etc/shells and change your login shell to /bin/fish."
 	elog
 }
