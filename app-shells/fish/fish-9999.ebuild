@@ -21,8 +21,7 @@ DEPEND="app-doc/doxygen
 	sys-devel/bc
 	sys-devel/gettext
 	www-client/htmlview
-	X? ( x11-misc/xsel )
-	!app-shells/fish"
+	X? ( x11-misc/xsel )"
 
 RDEPEND=""
 src_prepare() {
