@@ -28,7 +28,7 @@ RDEPEND="${RDEPEND}
 	app-portage/layman
 	app-portage/gentoolkit
 	
-	|| ( app-shells/fish app-shells/fishfish )
+	app-shells/fish
 	
 	app-text/wgetpaste
 	
@@ -94,6 +94,7 @@ RDEPEND="${RDEPEND}
 		media-fonts/ipamonafont
 		media-fonts/ja-ipafonts
 		media-fonts/proggy-fonts
+		media-fonts/roboto
 		media-fonts/takao-fonts
 		media-fonts/terminus-font
 		media-fonts/wqy-microhei
@@ -104,7 +105,7 @@ RDEPEND="${RDEPEND}
 		
 		media-sound/alsa-utils
 		
-		media-video/mplayer
+		media-video/mplayer2
 		media-video/rtmpdump
 		
 		net-im/gajim
@@ -116,9 +117,11 @@ RDEPEND="${RDEPEND}
 		x11-misc/parcellite
 		x11-misc/screen-message
 		x11-misc/xclip
+		x11-misc/xdotool
 		
 		x11-wm/i3
 		x11-misc/i3status
+		dev-lang/lua
 	)
 "
 
