@@ -12,7 +12,7 @@ SRC_URI="http://fishshell.com/files/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="x86"
 IUSE="X"
 
 DEPEND="sys-libs/ncurses

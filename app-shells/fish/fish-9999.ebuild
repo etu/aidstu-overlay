@@ -6,8 +6,8 @@ EAPI="4"
 
 inherit base autotools git-2 eutils
 
-DESCRIPTION="fishfish is a fork of fish, the Friendly Interactive SHell"
-HOMEPAGE="http://ridiculousfish.com/shell/"
+DESCRIPTION="fish is the Friendly Interactive SHell"
+HOMEPAGE="http://fishshell.com/"
 
 EGIT_REPO_URI="git://github.com/fish-shell/fish-shell.git"
 
