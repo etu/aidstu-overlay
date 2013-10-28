@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://github.com/erkin/ponysay.git"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="**"
+KEYWORDS="-*"
 IUSE="-info -bash-completion -fish-completion -zsh-completion"
 
 DEPEND="app-arch/gzip
