@@ -22,12 +22,23 @@ DEPEND="sys-libs/ncurses
 	X? ( x11-misc/xsel )"
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-2.1.0-respect-docdir.patch"
+)
+
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-2.1.0-respect-docdir.patch"
+
 	eautoreconf
 }
 
 src_configure() {
-	econf --bindir="${EPREFIX}/bin"
+	# Set things up for fish to be a default shell.
+	# It has to be in /bin in case /usr is unavailable.
+	# Also, all of its utilities have to be in /bin.
+	econf \
+		docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--bindir="${EPREFIX}"/bin
 }
 
 pkg_postinst() {

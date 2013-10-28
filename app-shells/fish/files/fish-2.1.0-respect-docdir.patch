@@ -1,0 +1,35 @@
+* Backport of patch to respect docdir
+
+--- a/Makefile.in	Mon Oct 28 17:56:34 2013 +0100
++++ b/Makefile.in	Mon Oct 28 17:58:52 2013 +0100
+@@ -61,7 +61,7 @@
+ # Various flags
+ #
+ 
+-MACROS = -DLOCALEDIR=\"$(localedir)\" -DPREFIX=L\"$(prefix)\" -DDATADIR=L\"$(datadir)\" -DSYSCONFDIR=L\"$(sysconfdir)\" -DBINDIR=L\"$(bindir)\"
++MACROS = -DLOCALEDIR=\"$(localedir)\" -DPREFIX=L\"$(prefix)\" -DDATADIR=L\"$(datadir)\" -DSYSCONFDIR=L\"$(sysconfdir)\" -DBINDIR=L\"$(bindir)\" -DDOCDIR=L\"$(docdir)\"
+ CXXFLAGS = @CXXFLAGS@ $(MACROS) $(EXTRA_CXXFLAGS)
+ LDFLAGS = @LIBS@ @LDFLAGS@
+ LDFLAGS_FISH = ${LDFLAGS} @LIBS_FISH@ @LDFLAGS_FISH@
+diff -r dde1dbee69be fish.cpp
+--- a/fish.cpp	Mon Oct 28 17:56:34 2013 +0100
++++ b/fish.cpp	Mon Oct 28 17:58:52 2013 +0100
+@@ -189,7 +189,8 @@
+                 paths.bin = base_path + L"/bin";
+ 
+                 struct stat buf;
+-                if (0 == wstat(paths.data, &buf) && 0 == wstat(paths.sysconf, &buf))
++                if (0 == wstat(paths.data, &buf) && 0 == wstat(paths.sysconf, &buf) &&
++                        0 == wstat(paths.doc, &buf))
+                 {
+                     done = true;
+                 }
+@@ -202,7 +203,7 @@
+         /* Fall back to what got compiled in. */
+         paths.data = L"" DATADIR "/fish";
+         paths.sysconf = L"" SYSCONFDIR "/fish";
+-        paths.doc = L"" DATADIR "/doc/fish";
++        paths.doc = L"" DOCDIR;
+         paths.bin = L"" BINDIR;
+ 
+         done = true;
