@@ -11,12 +11,12 @@ HOMEPAGE='https://github.com/erkin/ponysay'
 
 SRC_URI=''
 EGIT_REPO_URI='git://github.com/erkin/ponysay.git'
-EGIT_COMMIT='2.9.1'
+EGIT_COMMIT=$PV
 
 LICENSE='WTFPL-2'
 SLOT='0'
 KEYWORDS='~x86 ~amd64'
-IUSE='-info -bash-completion -fish-completion -zsh-completion'
+IUSE='-info -bash-completion -fish-completion -zsh-completion -strict-license'
 
 DEPEND='info? ( sys-apps/texinfo )
 		app-arch/gzip
@@ -29,7 +29,13 @@ RDEPEND='sys-apps/coreutils
 		zsh-completion?  ( app-shells/zsh )'
 
 src_compile() {
-	python3 setup.py --everything                               \
+	if [ $(use_with strict-license) = "--with-strict-license" ]; then
+		freedom='--freedom=strict'
+	else
+		freedom='--freedom=partial'
+	fi
+
+	python3 setup.py --everything $freedom                      \
 		--without-pdf                                       \
 		$(use_with bash-completion | sed 's/-completion//') \
 		$(use_with fish-completion | sed 's/-completion//') \
@@ -37,9 +43,9 @@ src_compile() {
 		$(use_with info)                                    \
 			build
 }
-
+# --freedom=partial --freedom=strict
 src_install() {
-	python3 setup.py --everything                               \
+	python3 setup.py --everything $freedom                      \
 		--without-pdf                                       \
 		--dest-dir=${D}                                     \
 		$(use_with bash-completion | sed 's/-completion//') \
