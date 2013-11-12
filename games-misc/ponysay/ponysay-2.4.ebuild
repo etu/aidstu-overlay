@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/erkin/ponysay"
 
 SRC_URI=""
 EGIT_REPO_URI="git://github.com/erkin/ponysay.git"
-EGIT_COMMIT="2.4"
+EGIT_COMMIT=$PV
 
 LICENSE="WTFPL-2"
 SLOT="0"
