@@ -43,7 +43,7 @@ src_compile() {
 		$(use_with info)                                    \
 			build
 }
-# --freedom=partial --freedom=strict
+
 src_install() {
 	python3 setup.py --everything $freedom                      \
 		--without-pdf                                       \
