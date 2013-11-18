@@ -15,7 +15,7 @@ EGIT_COMMIT=$PV
 
 LICENSE='WTFPL-2'
 SLOT='0'
-KEYWORDS='~x86 ~amd64'
+KEYWORDS='x86 amd64'
 IUSE='-info -bash-completion -fish-completion -zsh-completion -strict-license'
 
 DEPEND='info? ( sys-apps/texinfo )
